@@ -60,3 +60,28 @@ Verify that the intended WAF rule is responsible for the challenge.
 Confirm that legitimate users can reach the WordPress login page after completing the challenge.
 
 Document the final behavior and any required configuration changes.
+
+Test Condition 3 — Clean Microsoft Edge Browser
+
+A clean Microsoft Edge browser session was used to access:
+
+https://jackiedesignstudio.com/wp-login.php
+
+
+No existing authenticated browser session was used for this test.
+
+Cloudflare displayed its security-check processing screen for several seconds.
+
+The browser then displayed:
+
+"This has been disabled."
+
+The WordPress login page was not displayed.
+
+Reproducibility
+
+The "This has been disabled." behavior was reproduced using a clean browser session.
+
+A previously used browser session, which retained prior authentication-related state, successfully proceeded to the WordPress login page after the Cloudflare security check.
+
+The difference between the two test conditions has not yet been isolated to a specific cause.
